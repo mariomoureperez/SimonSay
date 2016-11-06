@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SimonSays</string>
+    <string name="azul"> </string>
+    <string name="rojo"> </string>
+    <string name="amarillo"> </string>
+    <string name="verde"> </string>
+    <string name="empezar">Simon Dice</string>
+    <string name="nivel">Nivel: 1</string>
+</resources>

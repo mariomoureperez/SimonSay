@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mario.simonsays.MainActivity"
+    android:layout_gravity="center"
+    android:background="@android:color/background_dark"
+    tools:background="@android:color/background_dark">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="2"
+        android:layout_gravity="center"
+        android:paddingTop="90dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Space
+            android:id="@+id/space"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_columnSpan="2"
+            android:layout_height="10dp"
+            />
+
+        <Button
+            android:id="@+id/azul"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:text="@string/azul"
+            android:background="@color/azul"
+            android:onClick="eventoAzul"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_marginLeft="25dp" />
+
+        <Button
+            android:id="@+id/rojo"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:text="@string/rojo"
+            android:background="@color/rojo"
+            android:onClick="eventoRojo"
+            android:layout_column="1"
+            android:layout_row="2"
+            />
+
+        <Button
+            android:id="@+id/amarillo"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:text="@string/amarillo"
+            android:background="@color/amarillo"
+            android:onClick="eventoAmarillo"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:layout_marginLeft="25dp" />
+
+        <Button
+            android:id="@+id/verde"
+            android:layout_height="100dp"
+            android:text="@string/verde"
+            android:background="@color/verde"
+            android:onClick="eventoVerde"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:layout_width="140dp" />
+
+        <Button
+            android:id="@+id/empezar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/empezar"
+            android:background="@color/gris"
+            android:onClick="empezar"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnSpan="2"
+            android:textColor="#ffffff"
+            />
+
+
+    </GridLayout>
+
+    <TextView
+        android:text="@string/nivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nivel"
+        android:layout_below="@+id/gridLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="59dp"
+        android:textColor="#ffffff"/>
+</RelativeLayout>
