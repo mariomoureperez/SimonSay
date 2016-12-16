@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Button verde = (Button) findViewById(R.id.verde);
         verde.setEnabled(false);
         TextView nivel = (TextView) findViewById(R.id.nivel);
+
     }
 
     int[] botones = {R.id.azul, R.id.rojo, R.id.amarillo, R.id.verde};
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("hola","Has ganado");
             startActivity(intent);
 
-            Toast.makeText(this, "Has Ganado!!! Pulsa Simon dice para continuar", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "Has Ganado!!! Pulsa Simon dice para continuar", Toast.LENGTH_SHORT).show();
             DIFICULT++;
             NIVEL++;
             nivel.setText("Nivel: "+NIVEL);
@@ -127,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent=new Intent(this,Main2Activity.class);
             intent.putExtra("hola","Has perdido");
             startActivity(intent);
-            Toast.makeText(this, "Has Perdido, lo que cuenta es participar ;)", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Has Perdido, lo que cuenta es participar ;)", Toast.LENGTH_SHORT).show();
             DIFICULT=4;
             NIVEL=1;
             colores.clear();
