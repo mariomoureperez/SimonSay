@@ -1,5 +1,6 @@
 package com.mario.simonsays;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -112,11 +113,20 @@ public class MainActivity extends AppCompatActivity {
         TextView nivel = (TextView) findViewById(R.id.nivel);
 
         if (colores.toString().equals(jugador.toString())) {
+            //llamar a otra activity
+            Intent intent=new Intent(this,Main2Activity.class);
+            intent.putExtra("hola","Has ganado");
+            startActivity(intent);
+
             Toast.makeText(this, "Has Ganado!!! Pulsa Simon dice para continuar", Toast.LENGTH_SHORT).show();
             DIFICULT++;
             NIVEL++;
             nivel.setText("Nivel: "+NIVEL);
         } else{
+
+            Intent intent=new Intent(this,Main2Activity.class);
+            intent.putExtra("hola","Has perdido");
+            startActivity(intent);
             Toast.makeText(this, "Has Perdido, lo que cuenta es participar ;)", Toast.LENGTH_SHORT).show();
             DIFICULT=4;
             NIVEL=1;
